@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   color: black;
-  background-color: whitesmoke;
   font-family: "Poppins", sans-serif;
 }
 a {
@@ -11,6 +10,7 @@ a {
 }
 body {
   min-width: 100%;
+  background-color: whitesmoke;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -124,7 +124,7 @@ footer {
 .page {
   display: flex;
   justify-content: center;
-
+  padding: 30px;
   width: 100%;
   height: 100%;
 }
@@ -147,6 +147,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
+  padding: 10px;
 }
 .about_page_content {
   margin-top: 50px;
@@ -167,4 +168,50 @@ footer {
 }
 .contact_container h2 {
   margin-top: 20px;
+}
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.contact_form input {
+  padding: 5px 0px;
+  margin-left: 30px;
+}
+.admin_page {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.admin_content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.appointment_card {
+  padding: 3rem;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 145, 0),
+    rgb(255, 251, 0)
+  );
+  display: flex;
+  flex-direction: column;
+}
+.delete_button {
+  box-shadow: none;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  right: 500px;
+}
+.update_button {
+  width: 150px;
+  background-color: whitesmoke;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: auto;
 }

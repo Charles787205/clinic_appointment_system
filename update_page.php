@@ -3,6 +3,8 @@ require_once 'components/header.php';
 echo '<body>';
 require_once 'components/navbar.php';
 require_once 'Database/AppointmentDatabase.php';
+$id = $_GET['id'];
+
 ?>
 
 <div class="booking_page">

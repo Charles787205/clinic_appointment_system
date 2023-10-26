@@ -27,7 +27,7 @@
 
       <h2>Contact Form</h2>
       <p>If you prefer, you can also contact us by filling out the form below. We'll get back to you as soon as possible.</p>
-      <form action="process_contact_form.php" method="post">
+      <form action="process_contact_form.php" method="post" class='contact_form'>
           <label for="name">Your Name:</label>
           <input type="text" id="name" name="name" required>
           <br>
