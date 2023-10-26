@@ -25,5 +25,6 @@
    </a>
     
   </div>
+  <p>Hope Health Clinic</p>
   <p style="margin-top:2rem;">ALL RIGHT RESERVED FOR 2023</p>
 </footer>
