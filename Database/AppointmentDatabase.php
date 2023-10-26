@@ -59,6 +59,37 @@ class AppointmentDatabase {
         return null;
     }
 }
+    public function readAppointmentById($appointmentId) {
+    $query = "SELECT * FROM Appointments WHERE appointment_id = ?";
+    $stmt = $this->db->prepare($query);
+    $stmt->bind_param("i", $appointmentId);
+    $stmt->execute();
+
+    // Get the result set
+    $result = $stmt->get_result();
+
+    if ($result->num_rows === 0) {
+        // No appointment found with the given ID
+        return null;
+    } else {
+        // Fetch the appointment as an associative array
+        $row = $result->fetch_assoc();
+
+        $appointment = array(
+            'appointmentId' => $row['appointment_id'],
+            'patientName' => $row['patient_name'],
+            'patientEmail' => $row['patient_email'],
+            'appointmentDate' => $row['appointment_date'],
+            'appointmentTime' => $row['appointment_time'],
+            'appointmentPurpose' => $row['appointment_purpose']
+        );
+
+        // Close the statement
+        $stmt->close();
+
+        return $appointment;
+    }
+}
 
 
     public function updateAppointment($appointmentId, $patientName, $patientEmail, $appointmentDate, $appointmentTime, $appointmentPurpose) {
