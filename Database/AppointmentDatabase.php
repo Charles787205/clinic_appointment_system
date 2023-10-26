@@ -6,7 +6,7 @@ class AppointmentDatabase {
     public function __construct() {
        
          try {
-            $this -> db = new mysqli('localhost', 'root', null, 'clinic_appointment_database');
+            $this -> db = new mysqli('sql210.infinityfree.com', 'if0_35305741', 'RllhgofVgso', 'if0_35305741_clinic_appointment_database');
 
             if (mysqli_connect_errno()){
               throw new Exception("Could not connect to database.");
